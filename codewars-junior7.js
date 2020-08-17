@@ -69,3 +69,77 @@
 //  };
 // console.log(gimme([2, 3, 1]));
 // console.log(gimme([5, 10, 14]));
+
+// Task 5
+
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings,
+// ordered from shortest to longest.
+// For example, if this array were passed as an argument:
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+// Your function would return the following array:
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+// All of the strings in the array passed to your function will be different lengths,
+// so you will not have to decide how to order multiple strings of the same length.
+
+// function sortByLength(array) {
+//   let newArray = array.sort(function (a, b) {
+//     return a.length - b.length;
+//   });
+//   return newArray;
+// }
+
+// console.log(sortByLength(['Beg', 'Life', 'I', 'To']));
+
+// Task 6
+
+// Implement a method that accepts 3 integer values a, b, c.
+// The method should return true if a triangle can be built with the sides of given length and false in any other case.
+// (In this case, all triangles must have surface greater than 0 to be accepted).
+
+// function isTriangle(a, b, c) {
+//   return a + b > c && a + c > b && b + c > a;
+// }
+
+// const isTriangle = (a, b, c) => {
+//   return a + b > c && a + c > b && b + c > a;
+// };
+// console.log(isTriangle(1, 2, 2));
+// console.log(isTriangle(7, 2, 2));
+
+// Task 7
+
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+// Example:
+// highAndLow("1 2 3 4 5");  // return "5 1"
+// highAndLow("1 2 -3 4 5"); // return "5 -3"
+// highAndLow("1 9 3 4 -5"); // return "9 -5"
+
+// function highAndLow(numbers) {
+//   let arrayMaxMin = [];
+//   const array = numbers.split(' ');
+//   let newNumbers = [];
+//   for (const arr of array) {
+//     const number = Number(arr);
+//     newNumbers.push(number);
+//   }
+//   arrayMaxMin.push(Math.max(...newNumbers), Math.min(...newNumbers));
+//   return arrayMaxMin.join(' ');
+// }
+// console.log(highAndLow('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'));
+
+// Task 8
+
+// Ben has a very simple idea to make some profit: he buys something and sells it again.
+// Of course, this wouldn't give him any profit at all if he was simply to buy and sell it at the same price.
+// Instead, he's going to buy it for the lowest possible price and sell it at the highest.
+// Write a function that returns both the minimum and maximum number of the given list / array.
+
+function minMax(arr) {
+  let arrayMinMax = [];
+  arrayMinMax.push(Math.min(...arr), Math.max(...arr));
+  return arrayMinMax;
+}
+
+console.log(minMax([1, 2, 3, 4, 5]));
+console.log(minMax([2334454, 5]));
+console.log(minMax([1]));
