@@ -134,12 +134,27 @@
 // Instead, he's going to buy it for the lowest possible price and sell it at the highest.
 // Write a function that returns both the minimum and maximum number of the given list / array.
 
-function minMax(arr) {
-  let arrayMinMax = [];
-  arrayMinMax.push(Math.min(...arr), Math.max(...arr));
-  return arrayMinMax;
-}
+// function minMax(arr) {
+//   let arrayMinMax = [];
+//   arrayMinMax.push(Math.min(...arr), Math.max(...arr));
+//   return arrayMinMax;
+// }
 
-console.log(minMax([1, 2, 3, 4, 5]));
-console.log(minMax([2334454, 5]));
-console.log(minMax([1]));
+// console.log(minMax([1, 2, 3, 4, 5]));
+// console.log(minMax([2334454, 5]));
+// console.log(minMax([1]));
+
+const input =
+  'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta';
+
+const modifyString = string => {
+  const array = string.split(' ');
+  let modifyArray = [];
+  array.forEach(arr => {
+    if (!modifyArray.includes(arr)) {
+      modifyArray.push(arr);
+    }
+  });
+  return modifyArray.join(' ');
+};
+console.log(modifyString(input));

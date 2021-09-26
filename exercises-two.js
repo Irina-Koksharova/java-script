@@ -275,19 +275,19 @@
 // Если хочешь, в случае некорректного ввода, показывай alert с текстом 'Было введено не число, попробуйте еще раз',
 // при этом результат prompt плюсовать к общей сумме не нужно, после чего снова пользователю предлагается ввести число в prompt.
 
-// let isGiven;
-// let number;
-// let total = 0;
-// do {
-//   isGiven = prompt(`Введите число`);
-//   number = +isGiven;
-//   if (Number.isNaN(number) === false) {
-//     total += number;
-//   } else {
-//     alert(`Было введено не число, попробуйте еще раз`);
-//     total;
-//   }
-// } while (isGiven);
-// if (!isGiven) {
-//   alert(`Общая сумма чисел равна ${total}`);
-// }
+let isGiven;
+let number;
+let total = 0;
+do {
+  isGiven = prompt(`Введите число`);
+  number = +isGiven;
+  if (Number.isNaN(number) === false) {
+    total += number;
+  } else {
+    alert(`Было введено не число, попробуйте еще раз`);
+    total;
+  }
+} while (isGiven);
+if (!isGiven) {
+  alert(`Общая сумма чисел равна ${total}`);
+}
